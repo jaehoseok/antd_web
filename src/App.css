@@ -1,38 +1,81 @@
+@import '~antd/dist/antd.css';
+
 .App {
+  height: 100vh;
+}
+
+.trigger {
+  padding: 0 24px;
+  font-size: 30px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: black;
+}
+
+.trigger:hover {
+  font-size: 40px;
+  color: #1890ff;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  background: rgba(0, 21, 41, 19);
+  border-radius: 50%;
   text-align: center;
+  color: rgba(24, 144, 255, 131);
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn1{
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  background: rgba(0, 21, 41, 19);
+  border-radius: 50%;
+  text-align: center;
+  color: rgba(24, 144, 255, 131);
+  position: fixed;
+  right: 110px;
+  bottom: 110px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn2{
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  background: rgba(0, 21, 41, 19);
+  border-radius: 50%;
+  text-align: center;
+  color: rgba(24, 144, 255, 131);
+  position: fixed;
+  right: 120px;
+  bottom: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn3{
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  background: rgba(0, 21, 41, 19);
+  border-radius: 50%;
+  text-align: center;
+  color: rgba(24, 144, 255, 131);
+  position: fixed;
+  right: 40px;
+  bottom: 120px;
 }
