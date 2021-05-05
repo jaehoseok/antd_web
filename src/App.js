@@ -1,13 +1,27 @@
 import './App.css';
-import {Collapse, Layout, Tooltip, Button} from 'antd';
+
 import React, { useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  BrowserRouter
+} from "react-router-dom";
+import './hoc/auth';
+
+
+import {Collapse, Layout, Tooltip, Button} from 'antd';
 import { MenuUnfoldOutlined, MenuFoldOutlined, AppstoreOutlined, BellFilled, ContactsOutlined, HomeFilled } from '@ant-design/icons';
 
 import Head from './components/Head/Head'
-import LandingPage from './components/LandingPage/LandingPage'
 import Sidebar from './components/SideBar/Sidebar'
 import Foot from './components/Foot/Foot'
-
+//pages
+import LandingPage from './components/LandingPage/LandingPage';
+import IntroducePage from './components/IntroducePage/IntruducePage';
+import TeamPage from './components/TeamPage/TeamPage';
+import MemberPage from './components/MemberPage/MemberPage';
+import SuggestionsPage from './components/SuggestionsPage/SuggestionsPage';
 
 function App() {
 
@@ -36,7 +50,16 @@ function App() {
         <a className="trigger" onClick={toggle}>{collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}</a>
       </Header>
       <Content style={{ margin: '24px 16px 0', backgroundColor:"white"}}>
-        <LandingPage/>
+      <BrowserRouter>
+            <Switch>
+              //todo 로그인이 필요한 경우: true, 로그인을 안해야 하는경우: false, 상관없는 경우: null
+              <Route exact path="/" component={LandingPage}/>
+              <Route exact path="/introduce" component={IntroducePage} />
+              <Route exact path="/team" component={TeamPage} />
+              <Route exact path="/member" component={MemberPage} />
+              <Route exact path="/suggestions" component={SuggestionsPage} />
+            </Switch>
+          </BrowserRouter>
       </Content>
 
       <div>
